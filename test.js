@@ -31,7 +31,7 @@ const { parse } = require('csv-parse');
 const formURL =
   'https://docs.google.com/forms/d/e/1FAIpQLSc6r_MQp21Vh12HmbgxBQQcGyGtofzx0LF-BQ4jzAQV4iwFrQ/formResponse';
 
-fs.createReadStream('./test.csv')
+fs.createReadStream('./data.csv')
   .pipe(parse({ delimiter: ',', from_line: 1 }))
   .on('data', async function (row) {
     // console.log(row);
